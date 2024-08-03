@@ -9,15 +9,19 @@
     <h1>INGENIERA {{name}}</h1>
     <h3>Categorías</h3>
     {#Hola soy yubitza#}
+    {% comment %}
+        Este es para agregar mas de una linea de comando
+        Holi Holi Holi
+    {% endcomment %}
     <ul>
         {% for category in categories %}
             {% if category == 'girasoles' or category == 'jazmin' %}
-                <li><b>{{category}}</b></li>
+                <li><b>{{category|upper}}</b></li>
             {% else %}
                 <li>{{category}}</li>
             {% endif %}
         {% endfor %}
-
+        <h5>Total de categorias: {{categories|length}}</h5>
     </ul>
 </body>
 </html>
